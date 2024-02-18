@@ -1,0 +1,33 @@
+.iconLeft {
+    color: #1D1D1D;
+    font-family: var(--typography-type-secondary);
+    font-style: italic;
+    font-size: var(--typography-size-m);
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+
+.iconRight {
+    color: #1D1D1D;
+    font-family: var(--typography-type-secondary);
+    font-style: italic;
+    line-height: 140%;
+    font-size: var(--typography-size-m);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.iconLeft img {
+    padding-left: 20px;
+    transform: scaleX(-1);
+    height: 30px;
+    width: 30px;
+}
+
+.iconRight img {
+    padding-left: 20px;
+    height: 30px;
+    width: 30px;
+}

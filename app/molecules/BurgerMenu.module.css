@@ -1,0 +1,100 @@
+/**
+Mobile first et après faire les medi querry au fur et à mesure
+ */
+.burger-menu {
+  position: absolute;
+  z-index: 10;
+  top: 15px;
+  right: 30px;
+  background-color: #F8F4E8;
+  border: 2px solid #1D1D1D;
+  border-radius: 12px;
+  width: 41px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Style du menu de navigation */
+.navbar {
+  display: none;
+  /* autres styles pour le menu de navigation */
+}
+
+.navbar ul li {
+  list-style: none;
+  /* autres styles pour les éléments de la liste */
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #1D1D1D;
+  font-family: Montserrat, serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  /* autres styles pour les liens */
+}
+
+/* Style pour le menu ouvert */
+.navbar.active {
+  display: block;
+  z-index: 5;
+  position: absolute;
+  padding: 1rem;
+  top: 10px;
+  right: 20px;
+  background-color: #F8F4E8;
+  border-radius: 12px;
+  border: 2px solid #1D1D1D;
+  height: 600px;
+}
+
+.navWrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.navWrapper img {
+  height: 180px;
+  width: 245px;
+}
+
+.social {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.social img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  height: 150px;
+  font-family: var(--typography-type-secondary);
+  font-size: var(--typography-size-m);
+  font-weight: var(--typography-weight-semibold);
+  line-height: 120%;
+  letter-spacing: 2px;
+}
+
+/**
+Quand on partira sur les plus grandes tailles d'écrans ça serait souhaitable de reprendre le style
+
+@media (min-width: 768px) {
+  .burger-menu {
+      /* Styles modifiés ou supplémentaires pour les écrans plus grands */
+/*}
+
+.navbar {
+  /* Styles modifiés ou supplémentaires pour les écrans plus grands */
+/*}
+}
+**/

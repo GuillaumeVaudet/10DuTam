@@ -1,0 +1,165 @@
+/* Bold */
+@font-face {
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-style: normal;
+    src: url('../../app/assets/fonts/montserrat/Montserrat-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-style: italic;
+    src: url('../../app/assets/fonts/montserrat/Montserrat-BoldItalic.ttf') format('truetype');
+}
+
+/* Semi Bold */
+@font-face {
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-style: normal;
+    src: url('../../app/assets/fonts/montserrat/Montserrat-SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-style: italic;
+    src: url('../../app/assets/fonts/montserrat/Montserrat-SemiBoldItalic.ttf') format('truetype');
+}
+
+/* Medium */
+@font-face {
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-style: normal;
+    src: url('../../app/assets/fonts/montserrat/Montserrat-Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-style: italic;
+    src: url('../../app/assets/fonts/montserrat/Montserrat-MediumItalic.ttf') format('truetype');
+}
+
+/* Regular */
+@font-face {
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-style: normal;
+    src: url('../../app/assets/fonts/montserrat/Montserrat-Regular.ttf') format('truetype');
+}
+
+/* Italic */
+@font-face {
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-style: italic;
+    src: url('../../app/assets/fonts/montserrat/Montserrat-Italic.ttf') format('truetype');
+}
+
+/* Light */
+@font-face {
+    font-family: 'Montserrat';
+    font-weight: 300;
+    font-style: normal;
+    src: url('../../app/assets/fonts/montserrat/Montserrat-Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    font-weight: 300;
+    font-style: italic;
+    src: url('../../app/assets/fonts/montserrat/Montserrat-LightItalic.ttf') format('truetype');
+}
+
+/* Extra Light */
+@font-face {
+    font-family: 'Montserrat';
+    font-weight: 200;
+    font-style: normal;
+    src: url('../../app/assets/fonts/montserrat/Montserrat-ExtraLight.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    font-weight: 200;
+    font-style: italic;
+    src: url('../../app/assets/fonts/montserrat/Montserrat-ExtraLightItalic.ttf') format('truetype');
+}
+
+/* Thin */
+@font-face {
+    font-family: 'Montserrat';
+    font-weight: 100;
+    font-style: normal;
+    src: url('../../app/assets/fonts/montserrat/Montserrat-Thin.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    font-weight: 100;
+    font-style: italic;
+    src: url('../../app/assets/fonts/montserrat/Montserrat-ThinItalic.ttf') format('truetype');
+}
+
+
+/* ---------------------------------------------------------------------------*/
+
+/* IM Fell English Regular */
+@font-face {
+    font-family: 'IM Fell English';
+    font-weight: 400;
+    font-style: normal;
+    src: url('../../app/assets/fonts/imfellEnglish/IMFellEnglish-Regular.ttf') format('truetype');
+}
+
+/* IM Fell English Italic */
+@font-face {
+    font-family: 'IM Fell English';
+    font-weight: 400;
+    font-style: italic;
+    src: url('../../app/assets/fonts/imfellEnglish/IMFellEnglish-Italic.ttf') format('truetype');
+}
+
+/* ---------------------------------------------------------------------------*/
+/* Karma Bold */
+@font-face {
+    font-family: 'Karma';
+    font-weight: 700; /* Bold */
+    font-style: normal;
+    src: url('../../app/assets/fonts/karma/Karma-Bold.ttf') format('truetype');
+}
+
+/* Karma Medium */
+@font-face {
+    font-family: 'Karma';
+    font-weight: 500; /* Medium */
+    font-style: normal;
+    src: url('../../app/assets/fonts/karma/Karma-Medium.ttf') format('truetype');
+}
+
+/* Karma Regular */
+@font-face {
+    font-family: 'Karma';
+    font-weight: 400; /* Regular */
+    font-style: normal;
+    src: url('../../app/assets/fonts/karma/Karma-Regular.ttf') format('truetype');
+}
+
+/* Karma SemiBold */
+@font-face {
+    font-family: 'Karma';
+    font-weight: 600; /* SemiBold */
+    font-style: normal;
+    src: url('../../app/assets/fonts/karma/Karma-SemiBold.ttf') format('truetype');
+}
+
+/* Karma Light */
+@font-face {
+    font-family: 'Karma';
+    font-weight: 300; /* Light */
+    font-style: normal;
+    src: url('../../app/assets/fonts/karma/Karma-Light.ttf') format('truetype');
+}

@@ -1,0 +1,23 @@
+:root {
+    /* Font type */
+    --typography-type-primary: 'Montserrat', sans-serif;
+    --typography-type-secondary: 'IM Fell English', serif;
+    --typography-type-tertiary: 'Karma', sans-serif;
+    
+    /* Font weight */
+    --typography-weight-thin: 200;     /* Montserrat Thin ou Karma Light */
+    --typography-weight-light: 300;    /* Montserrat Light */
+    --typography-weight-regular: 400;  /* Montserrat Regular ou Karma Regular */
+    --typography-weight-medium: 500;   /* Karma Medium */
+    --typography-weight-semibold: 600; /* Montserrat SemiBold ou Karma SemiBold */
+    --typography-weight-bold: 700;     /* Montserrat Bold */
+    
+    /* Font size */
+    --typography-size-xs: 0.75rem;
+    --typography-size-s: 0.875rem;
+    --typography-size-sm: 1rem;
+    --typography-size-m: 1.125rem;
+    --typography-size-ml: 1.5rem;
+    --typography-size-l: 1.75rem;
+    --typography-size-xl: 2.25rem;
+}

@@ -1,0 +1,13 @@
+.primary {
+    background-color: #F8F4E8;
+    border-radius: 10px;
+    border: 2px solid #1D1D1D;
+    color: #1D1D1D;
+    transition: background-color 0.3s ease, border 0.3s ease, color 0.3s ease;
+}
+
+.primary:hover {
+    background-color: #386641;
+    border: 2px solid transparent;
+    color: #F8F4E8;
+}

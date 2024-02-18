@@ -1,0 +1,76 @@
+:root{
+    /* Primary Black*/
+    --color-black: #1E1E1E;
+    
+    /* Garlic */
+    --color-garlic-50: #FEFDFA;
+    --color-garlic-100: #FAF7F0;
+    --color-garlic-200: #F8F4E8;
+    --color-garlic-300: #F5EEDE;
+    --color-garlic-400: #F3EBD7;
+    --color-garlic-500: #F0E6CD;
+    --color-garlic-600: #DAD1BB;
+    --color-garlic-700: #AAA392;
+    --color-garlic-800: #847F71;
+    --color-garlic-900: #656156;
+    
+    /* Rosemary */
+    --color-rosemary-50: #EBF0EC;
+    --color-rosemary-100: #C1D0C4;
+    --color-rosemary-200: #A3B9A8;
+    --color-rosemary-300: #7A9880;
+    --color-rosemary-400: #608567;
+    --color-rosemary-500: #386641;
+    --color-rosemary-600: #335D3B;
+    --color-rosemary-700: #28482E;
+    --color-rosemary-800: #1F3824;
+    --color-rosemary-900: #182B1B;
+    
+    /* Butterfly */
+    --color-butterfly-50: #E8EEF1;
+    --color-butterfly-100: #B7CBD5;
+    --color-butterfly-200: #94B1C0;
+    --color-butterfly-300: #648EA3;
+    --color-butterfly-400: #457891;
+    --color-butterfly-500: #175676;
+    --color-butterfly-600: #154E6B;
+    --color-butterfly-700: #103D54;
+    --color-butterfly-800: #0D2F41;
+    --color-butterfly-900: #0A2432;
+    
+    /* Matcha */
+    --color-matcha-50: #F2F7F0;
+    --color-matcha-100: #D7E6D1;
+    --color-matcha-200: #C4DABA;
+    --color-matcha-300: #A9C99B;
+    --color-matcha-400: #99BE87;
+    --color-matcha-500: #7FAE69;
+    --color-matcha-600: #749E60;
+    --color-matcha-700: #5A7C4B;
+    --color-matcha-800: #46603A;
+    --color-matcha-900: #35492C;
+    
+    /* Paprika */
+    --color-paprika-50: #F8EBE7;
+    --color-paprika-100: #EAC0B5;
+    --color-paprika-200: #E0A192;
+    --color-paprika-300: #D17660;
+    --color-paprika-400: #C95C41;
+    --color-paprika-500: #BB3311;
+    --color-paprika-600: #AA2E0F;
+    --color-paprika-700: #85240C;
+    --color-paprika-800: #671C09;
+    --color-paprika-900: #4F1507;
+    
+    /* Ruby cocoa */
+    --color-ruby-50: #FCF8F7;
+    --color-ruby-100: #F7EAE5;
+    --color-ruby-200: #F3E0D9;
+    --color-ruby-300: #EDD2C7;
+    --color-ruby-400: #E9C9BD;
+    --color-ruby-500: #E4BCAC;
+    --color-ruby-600: #CFAB9D;
+    --color-ruby-700: #A2857A;
+    --color-ruby-800: #7D675F;
+    --color-ruby-900: #604F48;
+}

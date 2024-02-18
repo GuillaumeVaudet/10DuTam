@@ -1,0 +1,14 @@
+.image-wrapper{
+    position: absolute;
+    top: 16px;
+    left: 35px;
+    background-color: var(--color-garlic-200);
+    height: 30px;
+    width: 41px;
+    object-fit: contain;
+    border-radius: 6px;
+    img{
+        height: 30px;
+        width: 41px;
+    }
+}

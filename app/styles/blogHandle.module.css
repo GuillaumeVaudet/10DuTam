@@ -1,0 +1,13 @@
+.top-part {
+  margin-bottom: 20px;
+  background-color: var(--color-garlic-200);
+  border: 2px solid var(--color-black);
+  border-radius: 14px;
+}
+
+.listing {
+  margin-bottom: 20px;
+  background-color: var(--color-garlic-200);
+  border: 2px solid var(--color-black);
+  border-radius: 14px;
+}

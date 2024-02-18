@@ -20,4 +20,4 @@ module.exports = {
     v3_fetcherPersist: true,
     v3_relativeSplatpath: true,
   },
-};
+}

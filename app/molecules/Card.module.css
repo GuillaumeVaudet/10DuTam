@@ -1,0 +1,221 @@
+.wrapper {
+    height: 214px;
+
+    border: 2px solid #1D1D1D;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper img {
+    height: 166px;
+    width: 275px;
+    object-fit: cover;
+    border-bottom: 2px solid #1D1D1D;
+    border-radius: 10px 10px 0 0;
+}
+
+.card-title {
+    color: #1D1D1D;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: var(--typography-size-m);
+    border-radius: 0 0 12px 12px;
+    text-transform: uppercase;
+    line-height: 140%;
+    letter-spacing: 2px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+}
+
+Button {
+    font-size: var(--typography-type-secondary);
+    font-weight: var(--typography-weight-semibold);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 120%;
+}
+
+/* recipes */
+
+.recipes Button {
+    display: none;
+}
+
+.recipes .timer {
+    display: none;
+}
+
+.wrapper.recipes {
+    width: 130px;
+}
+
+.recipes img {
+    width: auto;
+    height: 108px;
+}
+
+.recipes .card-title {
+    font-size: var(--typography-size-s);
+}
+
+/* variants home recipes*/
+
+.homeRecipes Button {
+    display: none;
+}
+
+.homeRecipes .timer {
+    display: none;
+}
+
+/* variants shop*/
+.wrapper.shop {
+    position: relative;
+    height: 140px;
+}
+
+.shop img {
+    height: 140px;
+    border: none;
+    border-radius: 10px;
+}
+
+.shop .card-title {
+    display: none;
+}
+
+.shop Button {
+    position: absolute;
+    bottom: -20px;
+    left: 30%;
+    width: 115px;
+    height: 37px;
+}
+
+/* variants about*/
+.wrapper.about {
+    position: relative;
+    height: 301px;
+}
+
+.about img {
+    height: 301px;
+    border-radius: 10px;
+    border: none;
+}
+
+.about .card-title {
+    display: none;
+}
+
+.about Button {
+    position: absolute;
+    bottom: -20px;
+    left: 30%;
+    width: 115px;
+    height: 37px;
+}
+
+/* variants blog*/
+.wrapper.blog {
+    position: relative;
+    display: flex;
+    height: 144px;
+    flex-direction: row-reverse;
+}
+
+.blog img {
+    width: 100px;
+    height: 144px;
+    border-radius: 0 10px 10px 0;
+    border-left: 2px solid #1D1D1D;
+}
+
+.blog Button {
+    position: absolute;
+    bottom: -20px;
+    left: 17%;
+    height: 37px;
+    width: 186px;
+    text-transform: uppercase;
+}
+
+.blog .icon {
+    width: 18px;
+    height: 18px;
+    border: none;
+}
+
+.blog span {
+    font-family: var(--typography-type-tertiary);
+    font-weight: var(--typography-weight-medium);
+    font-size: var(--typography-size-s);
+    line-height: 150%;
+}
+
+.timer {
+    display: flex;
+    gap: 10px;
+    text-transform: lowercase;
+}
+
+
+@media (min-width: 390px) {
+    .wrapper {
+        height: 214px;
+        width: 320px;
+        border: 2px solid #1D1D1D;
+        border-radius: 12px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .wrapper img {
+        height: 166px;
+        width: 320px;
+        object-fit: cover;
+        border-bottom: 2px solid #1D1D1D;
+        border-radius: 10px 10px 0 0;
+    }
+
+    /* variants shop*/
+    .wrapper.shop {
+        position: relative;
+        height: 140px;
+    }
+
+    .shop img {
+        height: 140px;
+        border: none;
+        border-radius: 10px;
+    }
+
+    .shop Button {
+        left: 25%;
+        width: 160px;
+    }
+
+    /* variants about*/
+    .about img {
+        height: 301px;
+        border-radius: 10px;
+        border: none;
+    }
+
+    .about Button {
+        left: 25%;
+        width: 160px;
+    }
+
+    /* variants blog*/
+    .blog img {
+        width: 100px;
+        height: 144px;
+        border-radius: 0 10px 10px 0;
+        border-left: 2px solid #1D1D1D;
+    }
+}
