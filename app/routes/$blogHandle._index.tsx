@@ -1,11 +1,34 @@
 import Card, { VARIANT } from '~/molecules/Card'
 import { type LoaderFunctionArgs, json } from '@remix-run/server-runtime'
+import { Pagination, getPaginationVariables } from '@shopify/hydrogen'
 import { useLoaderData, useNavigate } from '@remix-run/react'
 import ArrowTitle from '~/atoms/ArrowTitle'
+import { BLOGS_QUERY } from '../graphql/blog/BlogsQuery'
 import { LeftPage } from '~/layout/LeftPage'
+import { RECENT_THREE_ARTICLES_QUERY } from '../graphql/blog/BlogRecentArticlesQuery'
 import { RightPage } from '~/layout/RightPage'
-import { getPaginationVariables } from '@shopify/hydrogen'
 import styles from '../styles/blogHandle.module.css'
+
+export interface Article {
+  id: string,
+  title: string,
+  publishedAt: string,
+  handle: string,
+  author: {
+    name: string
+  },
+  blog: {
+    handle: string
+  },
+  contentHtml: string,
+  image: {
+    altText: string | null,
+    height: number,
+    width: number,
+    id: string,
+    url: string,
+  }
+}
 
 export const loader = async ({
   request,
@@ -20,6 +43,12 @@ export const loader = async ({
     throw new Response(`blog not found`, { status: 404 })
   }
 
+  const recentArticles = await storefront.query(RECENT_THREE_ARTICLES_QUERY, {
+    variables: {
+      blogHandle: params.blogHandle,
+    },
+  })
+
   const { blog } = await storefront.query(BLOGS_QUERY, {
     variables: {
       blogHandle: params.blogHandle,
@@ -31,18 +60,15 @@ export const loader = async ({
     throw new Response('Not found', { status: 404 })
   }
 
-  return json({ blog })
+  return json({ blog, recentArticles })
 }
 
 
 export default function Blog() {
-  const navigate = useNavigate()
-  const { blog } = useLoaderData<typeof loader>()
-  const { articles } = blog
 
-  console.log("blogs récupérés ", blog)
-  console.log("articles récupérés ", articles)
-  const sortedArticles = articles.nodes.sort((a, b) => new Date(b.publishedAt) - new Date(a.publishedAt)).slice(0, 3);
+  const navigate = useNavigate()
+  const { blog, recentArticles } = useLoaderData<typeof loader>()
+  const { articles } = blog
 
   return (<>
     <RightPage>
@@ -51,7 +77,7 @@ export default function Blog() {
           iconPosition={ "right" }
           label={ "Nouveaux articles" }
         />
-        { sortedArticles.map((article) => (
+        { recentArticles.blog.articles.nodes.map((article: Article) => (
           <Card
             key={ article.id }
             title={ article.title }
@@ -62,77 +88,33 @@ export default function Blog() {
         )) }
       </div>
       <div className={ styles.listing }>
-        { articles.nodes.map((article) => (
-          <Card
-            key={ article.id }
-            title={ article.title }
-            image={ article.image.url }
-            variant={ VARIANT.Blog }
-            handleClick={ () => navigate(`/${article.blog.handle}/${article.handle}`) }
-          />
-        )) }
+        <Pagination connection={ articles }>
+          { ({ nodes, isLoading, PreviousLink, NextLink }) => {
+            return (
+              <>
+                <PreviousLink>
+                  { isLoading ? 'Loading...' : <span>↑ Load previous</span> }
+                </PreviousLink>
+                { nodes.map((article) => (
+                  <Card
+                    key={ article.id }
+                    title={ article.title }
+                    image={ article.image.url }
+                    variant={ VARIANT.Blog }
+                    handleClick={ () => navigate(`/${article.blog.handle}/${article.handle}`) }
+                  />
+                )) }
+                <NextLink>
+                  { isLoading ? 'Loading...' : <span>Load more ↓</span> }
+                </NextLink>
+              </>
+            )
+          } }
+
+        </Pagination>
       </div>
     </RightPage>
     <LeftPage></LeftPage>
   </>
   )
 }
-
-
-// NOTE: https://shopify.dev/docs/api/storefront/latest/objects/blog
-const BLOGS_QUERY = `#graphql
-  query Blog(
-        $language: LanguageCode
-        $blogHandle: String!
-        $first: Int
-        $last: Int
-        $startCursor: String
-        $endCursor: String
-        ) @inContext(language: $language) {
-          blog(handle: $blogHandle) {
-          title
-      seo {
-          title
-        description
-      }
-        articles(
-        first: $first,
-        last: $last,
-        before: $startCursor,
-        after: $endCursor
-        ) {
-          nodes {
-          ...ArticleItem
-        }
-        pageInfo {
-          hasPreviousPage
-          hasNextPage
-        hasNextPage
-        endCursor
-        startCursor
-        }
-
-      }
-    }
-  }
-        fragment ArticleItem on Article {
-          author: authorV2 {
-          name
-        }
-        contentHtml
-        handle
-        id
-        image {
-          id
-      altText
-        url
-        width
-        height
-    }
-        publishedAt
-        title
-        blog {
-          handle
-        }
-  }
-        ` as const
