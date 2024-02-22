@@ -1,21 +1,21 @@
 .wrapper {
     height: 214px;
-
     border: 2px solid #1D1D1D;
     border-radius: 12px;
     display: flex;
     flex-direction: column;
+    margin-bottom: 20px;
 }
 
 .wrapper img {
     height: 166px;
-    width: 275px;
     object-fit: cover;
     border-bottom: 2px solid #1D1D1D;
     border-radius: 10px 10px 0 0;
 }
 
 .card-title {
+    background-color: var(--color-garlic-100);
     color: #1D1D1D;
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
@@ -28,7 +28,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-
+    overflow: hidden;
 }
 
 Button {
@@ -37,6 +37,7 @@ Button {
     text-transform: uppercase;
     letter-spacing: 2px;
     line-height: 120%;
+    background-color: var(--color-garlic-100);
 }
 
 /* recipes */
@@ -47,15 +48,6 @@ Button {
 
 .recipes .timer {
     display: none;
-}
-
-.wrapper.recipes {
-    width: 130px;
-}
-
-.recipes img {
-    width: auto;
-    height: 108px;
 }
 
 .recipes .card-title {
@@ -89,6 +81,7 @@ Button {
 }
 
 .shop Button {
+    background-color: var(--color-garlic-100);
     position: absolute;
     bottom: -20px;
     left: 30%;
@@ -113,6 +106,7 @@ Button {
 }
 
 .about Button {
+    background-color: var(--color-garlic-100);
     position: absolute;
     bottom: -20px;
     left: 30%;
@@ -128,6 +122,11 @@ Button {
     flex-direction: row-reverse;
 }
 
+.blog .card-title {
+    border-radius: 10px 0 0 10px;
+    background-color: var(--color-garlic-100);
+}
+
 .blog img {
     width: 100px;
     height: 144px;
@@ -136,6 +135,7 @@ Button {
 }
 
 .blog Button {
+    background-color: var(--color-garlic-100);
     position: absolute;
     bottom: -20px;
     left: 17%;

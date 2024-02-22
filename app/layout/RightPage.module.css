@@ -1,3 +1,5 @@
 .right-page-wrapper {
-    padding: 0.4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }

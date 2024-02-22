@@ -8,11 +8,9 @@ import { LeftPage } from '~/layout/LeftPage'
 import { RightPage } from '~/layout/RightPage'
 import { SELECT_ARTICLE_BY_ID } from '~/graphql/blog/BlogGetArticleByIdQuery'
 import { extractMetafields } from '~/utils/ExtractMetafields'
-import ramen from '../assets/images/soup.png'
 import { selectRandomId } from '~/utils/SelectRandomId'
 import styles from '../styles/index.module.css'
 import theo from '../assets/images/Theo.png'
-import { useEffect } from 'react'
 
 export async function loader({
   context: { storefront }

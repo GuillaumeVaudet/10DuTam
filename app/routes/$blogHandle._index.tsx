@@ -60,19 +60,19 @@ export const loader = async ({
     throw new Response('Not found', { status: 404 })
   }
 
-  return json({ blog, recentArticles })
+  return json({ blog, recentArticles, blogHandle: params.blogHandle })
 }
 
 
 export default function Blog() {
 
   const navigate = useNavigate()
-  const { blog, recentArticles } = useLoaderData<typeof loader>()
+  const { blog, recentArticles, blogHandle } = useLoaderData<typeof loader>()
   const { articles } = blog
 
   return (<>
     <RightPage>
-      <div className={ styles["top-part"] }>
+      <div className={ `${styles["top-part"]} ${blogHandle === "blog" ? styles.blogStyle : styles.recettes}` }>
         <ArrowTitle
           iconPosition={ "right" }
           label={ "Nouveaux articles" }

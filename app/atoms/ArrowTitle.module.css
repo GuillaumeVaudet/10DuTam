@@ -2,9 +2,10 @@
     color: #1D1D1D;
     font-family: var(--typography-type-secondary);
     font-style: italic;
-    font-size: var(--typography-size-m);
+    font-size: var(--typography-size-l);
+    line-height: 140%;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     flex-direction: row-reverse;
 }
 
@@ -13,7 +14,7 @@
     font-family: var(--typography-type-secondary);
     font-style: italic;
     line-height: 140%;
-    font-size: var(--typography-size-m);
+    font-size: var(--typography-size-l);
     display: flex;
     flex-direction: row;
     align-items: center;
