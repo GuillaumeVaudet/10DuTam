@@ -56,7 +56,7 @@ export default function Homepage() {
   return (
     <div className={ styles.home }>
       <RightPage>
-        <ArrowTitle label={ 'Nouvelle recette' } iconPosition={ 'right' } />
+        <ArrowTitle label={ 'Nouvelle Recette' } iconPosition={ 'right' } />
         <Card
           handleClick={ () => navigate(`/recettes/${lastRecipe.handle}`) }
           variant={ VARIANT.HomeRecipes }
@@ -78,6 +78,7 @@ export default function Homepage() {
           timer={ articleMetafields.reading }
           button={ 'je veux savoir' }
         />
+        <ArrowTitle label={ 'Une recette qui flingue' } iconPosition={ 'right' } />
         <Card
           handleClick={ () => navigate(`/recettes/${randomArticle.handle}`) }
           variant={ VARIANT.HomeRecipes }

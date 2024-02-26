@@ -39,5 +39,17 @@ export const RECENT_THREE_ARTICLES_QUERY = `#graphql
     blog {
       handle
     }
+    metafields(
+            identifiers: [
+            {namespace: "custom", key: "first_category"},
+            {namespace: "custom", key: "second_category"},
+            {namespace: "custom", key: "difficulty"},
+            {namespace: "custom", key: "guest"},
+            {namespace: "custom", key: "prep_time"},
+            ]
+          ){
+            key
+            value
+          }
   }
 ` as const

@@ -20,7 +20,10 @@ query Blog($blogHandle: String!) {
             height
           }
           metafields(
-            identifiers: [{namespace: "custom", key: "blog_article"}, {namespace: "custom", key: "reading"}]
+            identifiers: [
+              {namespace: "custom", key: "blog_article"},
+              {namespace: "custom", key: "reading"}
+              ]
           ) {
             key
             value

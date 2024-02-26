@@ -1,8 +1,8 @@
 .home {
-    display: flex;
-    flex-direction: column;
-    background-color: var(--color-garlic-200);
-    border-radius: 14px;
-    border: 2px solid var(--color-black);
-    padding: 25px 0.6rem 0.6rem 0.6rem;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-garlic-200);
+  border-radius: 14px;
+  border: 2px solid var(--color-black);
+  padding: 25px 0.6rem 0.6rem 0.6rem;
 }

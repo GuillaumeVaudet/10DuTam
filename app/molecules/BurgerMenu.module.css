@@ -9,8 +9,8 @@ Mobile first et après faire les medi querry au fur et à mesure
   background-color: #F8F4E8;
   border: 2px solid #1D1D1D;
   border-radius: 12px;
-  width: 41px;
-  height: 30px;
+  width: 51px;
+  height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -40,11 +40,12 @@ Mobile first et après faire les medi querry au fur et à mesure
 /* Style pour le menu ouvert */
 .navbar.active {
   display: block;
+  width: -webkit-fill-available;
   z-index: 5;
   position: absolute;
   padding: 1rem;
   top: 2px;
-  right: 20px;
+  right: 0;
   background-color: #F8F4E8;
   border-radius: 12px;
   border: 2px solid #1D1D1D;
@@ -61,7 +62,6 @@ Mobile first et après faire les medi querry au fur et à mesure
 
 .navWrapper img {
   height: 180px;
-  width: 245px;
 }
 
 .social {

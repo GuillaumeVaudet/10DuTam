@@ -1,12 +1,11 @@
 import Card, { VARIANT } from '~/molecules/Card'
 import { type LoaderFunctionArgs, json } from '@remix-run/server-runtime'
-import { Pagination, getPaginationVariables } from '@shopify/hydrogen'
 import { useLoaderData, useNavigate } from '@remix-run/react'
-import ArrowTitle from '~/atoms/ArrowTitle'
 import { BLOGS_QUERY } from '../graphql/blog/BlogsQuery'
-import { LeftPage } from '~/layout/LeftPage'
+import BlogIndexLayout from '~/layout/BlogIndexLayout'
 import { RECENT_THREE_ARTICLES_QUERY } from '../graphql/blog/BlogRecentArticlesQuery'
-import { RightPage } from '~/layout/RightPage'
+import RecipesIndexLayout from '~/layout/RecipesIndexLayout'
+import { getPaginationVariables } from '@shopify/hydrogen'
 import styles from '../styles/blogHandle.module.css'
 
 export interface Article {
@@ -68,53 +67,34 @@ export default function Blog() {
 
   const navigate = useNavigate()
   const { blog, recentArticles, blogHandle } = useLoaderData<typeof loader>()
+  const lastArticle = recentArticles.blog.articles.nodes[0]
   const { articles } = blog
 
-  return (<>
-    <RightPage>
-      <div className={ `${styles["top-part"]} ${blogHandle === "blog" ? styles.blogStyle : styles.recettes}` }>
-        <ArrowTitle
-          iconPosition={ "right" }
-          label={ "Nouveaux articles" }
-        />
-        { recentArticles.blog.articles.nodes.map((article: Article) => (
-          <Card
-            key={ article.id }
-            title={ article.title }
-            image={ article.image.url }
-            variant={ VARIANT.Blog }
-            handleClick={ () => navigate(`/${article.blog.handle}/${article.handle}`) }
-          />
-        )) }
-      </div>
-      <div className={ styles.listing }>
-        <Pagination connection={ articles }>
-          { ({ nodes, isLoading, PreviousLink, NextLink }) => {
-            return (
-              <>
-                <PreviousLink>
-                  { isLoading ? 'Loading...' : <span>↑ Load previous</span> }
-                </PreviousLink>
-                { nodes.map((article) => (
-                  <Card
-                    key={ article.id }
-                    title={ article.title }
-                    image={ article.image.url }
-                    variant={ VARIANT.Blog }
-                    handleClick={ () => navigate(`/${article.blog.handle}/${article.handle}`) }
-                  />
-                )) }
-                <NextLink>
-                  { isLoading ? 'Loading...' : <span>Load more ↓</span> }
-                </NextLink>
-              </>
-            )
-          } }
+  let contentComponent
 
-        </Pagination>
-      </div>
-    </RightPage>
-    <LeftPage></LeftPage>
-  </>
+  switch (blogHandle) {
+    case "blog":
+      contentComponent = <BlogIndexLayout
+        articles={ articles }
+        blogHandle={ blogHandle }
+        recentArticles={ recentArticles }
+      />
+      break
+    case "recettes":
+      contentComponent = <RecipesIndexLayout
+        articles={ articles }
+        blogHandle={ blogHandle }
+        lastArticle={ lastArticle }
+      />
+      break
+    default:
+      contentComponent = <BlogIndexLayout articles={ articles }
+        blogHandle={ blogHandle }
+        recentArticles={ recentArticles } />
+  }
+  return (
+    <>
+      { contentComponent }
+    </>
   )
 }

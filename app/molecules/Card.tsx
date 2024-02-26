@@ -6,6 +6,7 @@ import styles from './Card.module.css'
 export enum VARIANT {
   HomeRecipes = 'homeRecipes',
   Recipes = 'recipes',
+  RecipesList = 'recipesList',
   Shop = 'shop',
   About = 'about',
   Blog = 'blog'

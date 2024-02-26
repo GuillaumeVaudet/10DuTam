@@ -6,7 +6,7 @@ const ArrowTitle = ({ label, iconPosition = 'right' }: PropsWithChildren<Props>)
 
   return <>
     <div
-      className={ iconPosition === 'left' ? styles.iconLeft : styles.iconRight }>
+      className={ `${styles.iconBase} ${iconPosition === 'left' ? styles.iconLeft : styles.iconRight}` }>
       { label }
       <img src={ arrow } alt="Flèche manuscrite" />
     </div>
